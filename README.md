@@ -123,7 +123,7 @@ This generates `libcorelib.a`, the core roseNNa library file.
 
 ### Required roseNNa Files
 
-Add these files from roseNNa's `fLibrary/` directory to your RAMSES project:
+Add these files from roseNNa's `fLibrary/` directory to your RAMSES project (URAMSES):
 
 - `activation_funcs.f90`
 - `derived_types.f90`
@@ -227,51 +227,6 @@ case (evaluate_eqs)
    - Project → Properties → Linker → Input → Additional Dependencies
    - Add path to `libcorelib.a`
 
-4. **(Optional) Enable LAPACK** for matrix operations:
-   - Project → Properties → Fortran → Libraries → Use Intel Math Kernel Library
-   - Select "Parallel (/Qmkl:parallel)"
-
-### Linux/Mac
-
-Compile your RAMSES code with:
-
-```bash
-# Compile your Fortran files
-gfortran -c *.f90 -I/path/to/roseNNa/fLibrary/objFiles/
-
-# Link with roseNNa library
-gfortran -o ramses_sim /path/to/roseNNa/fLibrary/libcorelib.a *.o
-
-# Run
-./ramses_sim
-```
-
-### C Integration
-
-roseNNa can also be called from C code:
-
-```c
-void use_model(double * i0, double * o0);
-void initialize_nnx(char * model_name);
-
-int main(void) {
-    double input[1][10] = { /* ... */ };
-    double output[1][9];
-    
-    initialize_nnx("model_name");
-    use_model(input, output);
-    
-    // Process output...
-}
-```
-
-Compile with:
-```bash
-gcc -c *.c
-gfortran -o app /path/to/libcorelib.a *.o
-./app
-```
-
 ---
 
 ## 📁 Repository Structure
@@ -341,26 +296,17 @@ torch.onnx.export(model, (inp, hidden),
 
 ---
 
-## 🤝 Contributing
-
-Contributions are welcome! When adding models:
-
-1. Follow existing naming conventions
-2. Include parameter files (`.txt`) for your models
-3. Test thoroughly before submission
-4. Document special requirements or dependencies
-
----
-
 ## 📖 References
 
-- A. Bati, S. H. Bryngelson (2024). "RoseNNa: A performant, portable library for neural network inference with application to computational fluid dynamics". *Computer Physics Communications*, 296, 109052. [DOI: 10.1016/j.cpc.2023.109052](https://doi.org/10.1016/j.cpc.2023.109052)
+- B. Gelford (2025). "Integrating neural networks into dynamic power system simulators", MSc Thesis, ETH Zurich.
+- A. Bati, S. H. Bryngelson (2024). "RoseNNa: A performant, portable library for neural network inference with application to computational fluid dynamics". *Computer Physics Communications*. [DOI: 10.1016/j.cpc.2023.109052](https://doi.org/10.1016/j.cpc.2023.109052)
+- P. Aristidou, S. Lebeau, and T. Van Cutsem (2016). "Power system dynamic simulations using a parallel two-level schur-complement decomposition". *IEEE Transactions on Power Systems*. [doi: 10.1109/TPWRS.2015.2509023](https://doi.org/10.1109/TPWRS.2015.2509023)
 
 ---
 
 ## 📧 Contact
 
-**Author:** Sustainable Power Systems Lab (SPS-L)  
+**Author:** Bruno Gelfort
 **Web:** [https://sps-lab.org](https://sps-lab.org)  
 **Email:** info@sps-lab.org
 
