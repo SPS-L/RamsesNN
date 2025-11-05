@@ -1,0 +1,20 @@
+9
+Gemm
+64 8 
+64 
+Tanh
+Gemm
+64 64 
+64 
+Tanh
+Gemm
+64 64 
+64 
+Tanh
+Gemm
+64 64 
+64 
+Tanh
+Gemm
+7 64 
+7 

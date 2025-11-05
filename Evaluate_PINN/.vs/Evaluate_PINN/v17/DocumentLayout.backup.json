@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\s251046\\Documents\\bruno_ma_thesis\\Fortran\\Evaluate_PINN\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6499B4BD-7C26-EFDE-F36F-65D6E65DFC12}|Evaluate_PINN.vfproj|C:\\Users\\s251046\\Documents\\bruno_ma_thesis\\Fortran\\Evaluate_PINN\\evaluate_pinn.f90||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{6499B4BD-7C26-EFDE-F36F-65D6E65DFC12}|Evaluate_PINN.vfproj|solutionrelative:evaluate_pinn.f90||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6499B4BD-7C26-EFDE-F36F-65D6E65DFC12}|Evaluate_PINN.vfproj|c:\\users\\s251046\\documents\\bruno_ma_thesis\\fortran\\evaluate_pinn\\aux_functions.f90||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{6499B4BD-7C26-EFDE-F36F-65D6E65DFC12}|Evaluate_PINN.vfproj|solutionrelative:aux_functions.f90||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6499B4BD-7C26-EFDE-F36F-65D6E65DFC12}|Evaluate_PINN.vfproj|C:\\Users\\s251046\\Documents\\bruno_ma_thesis\\Fortran\\Evaluate_PINN\\rosenna.f90||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{6499B4BD-7C26-EFDE-F36F-65D6E65DFC12}|Evaluate_PINN.vfproj|solutionrelative:rosenna.f90||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6499B4BD-7C26-EFDE-F36F-65D6E65DFC12}|Evaluate_PINN.vfproj|C:\\Users\\s251046\\Documents\\bruno_ma_thesis\\Fortran\\Evaluate_PINN\\reader.f90||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{6499B4BD-7C26-EFDE-F36F-65D6E65DFC12}|Evaluate_PINN.vfproj|solutionrelative:reader.f90||{8B382828-6202-11D1-8870-0000F87579D2}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "aux_functions.f90",
+              "DocumentMoniker": "C:\\Users\\s251046\\Documents\\bruno_ma_thesis\\Fortran\\Evaluate_PINN\\aux_functions.f90",
+              "RelativeDocumentMoniker": "aux_functions.f90",
+              "ToolTip": "C:\\Users\\s251046\\Documents\\bruno_ma_thesis\\Fortran\\Evaluate_PINN\\aux_functions.f90",
+              "RelativeToolTip": "aux_functions.f90",
+              "ViewState": "AgIAAJ0AAAAAAAAAAAAgwB4AAAAIAAAAAAAAAA==",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAC5SURBVEhL7ZO9DcMgEIUf6XxzUVkMEXkCRmGCKEOgVMwFJSkikHLhx3Zw0viTKHyc9enZeiLGCAAQQmAr3vvXyxVomiCSIITQXC5wB3DlQ843gsyDbnyE2S9ASaCUet8sIKWE1jo/twQXfrEG5xyMMXyM2S/5JKoJrLV5icN3eIIkICKxK8EWhgr458FoQYld/6AHEeXWHp5giEApVe3PEEGLU9DlFHSpNnkPqf0/bfJHghH8J8FRPAFpM2GbpGwBHAAAAABJRU5ErkJggg==",
+              "WhenOpened": "2025-08-27T11:56:07.975Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Evaluate_PINN.f90",
+              "DocumentMoniker": "C:\\Users\\s251046\\Documents\\bruno_ma_thesis\\Fortran\\Evaluate_PINN\\Evaluate_PINN.f90",
+              "RelativeDocumentMoniker": "Evaluate_PINN.f90",
+              "ToolTip": "C:\\Users\\s251046\\Documents\\bruno_ma_thesis\\Fortran\\Evaluate_PINN\\Evaluate_PINN.f90",
+              "RelativeToolTip": "Evaluate_PINN.f90",
+              "ViewState": "AgIAADwAAAAAAAAAAAAAAFYAAAA2AAAAAAAAAA==",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAC5SURBVEhL7ZO9DcMgEIUf6XxzUVkMEXkCRmGCKEOgVMwFJSkikHLhx3Zw0viTKHyc9enZeiLGCAAQQmAr3vvXyxVomiCSIITQXC5wB3DlQ843gsyDbnyE2S9ASaCUet8sIKWE1jo/twQXfrEG5xyMMXyM2S/5JKoJrLV5icN3eIIkICKxK8EWhgr458FoQYld/6AHEeXWHp5giEApVe3PEEGLU9DlFHSpNnkPqf0/bfJHghH8J8FRPAFpM2GbpGwBHAAAAABJRU5ErkJggg==",
+              "WhenOpened": "2025-08-27T11:51:05.149Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "rosenna.f90",
+              "DocumentMoniker": "C:\\Users\\s251046\\Documents\\bruno_ma_thesis\\Fortran\\Evaluate_PINN\\rosenna.f90",
+              "RelativeDocumentMoniker": "rosenna.f90",
+              "ToolTip": "C:\\Users\\s251046\\Documents\\bruno_ma_thesis\\Fortran\\Evaluate_PINN\\rosenna.f90",
+              "RelativeToolTip": "rosenna.f90",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAOAAAAAAAAAA==",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAC5SURBVEhL7ZO9DcMgEIUf6XxzUVkMEXkCRmGCKEOgVMwFJSkikHLhx3Zw0viTKHyc9enZeiLGCAAQQmAr3vvXyxVomiCSIITQXC5wB3DlQ843gsyDbnyE2S9ASaCUet8sIKWE1jo/twQXfrEG5xyMMXyM2S/5JKoJrLV5icN3eIIkICKxK8EWhgr458FoQYld/6AHEeXWHp5giEApVe3PEEGLU9DlFHSpNnkPqf0/bfJHghH8J8FRPAFpM2GbpGwBHAAAAABJRU5ErkJggg==",
+              "WhenOpened": "2025-08-29T12:53:04.186Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "reader.f90",
+              "DocumentMoniker": "C:\\Users\\s251046\\Documents\\bruno_ma_thesis\\Fortran\\Evaluate_PINN\\reader.f90",
+              "RelativeDocumentMoniker": "reader.f90",
+              "ToolTip": "C:\\Users\\s251046\\Documents\\bruno_ma_thesis\\Fortran\\Evaluate_PINN\\reader.f90",
+              "RelativeToolTip": "reader.f90",
+              "ViewState": "AgIAABYAAAAAAAAAAAAswCYAAAAdAAAAAAAAAA==",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAC5SURBVEhL7ZO9DcMgEIUf6XxzUVkMEXkCRmGCKEOgVMwFJSkikHLhx3Zw0viTKHyc9enZeiLGCAAQQmAr3vvXyxVomiCSIITQXC5wB3DlQ843gsyDbnyE2S9ASaCUet8sIKWE1jo/twQXfrEG5xyMMXyM2S/5JKoJrLV5icN3eIIkICKxK8EWhgr458FoQYld/6AHEeXWHp5giEApVe3PEEGLU9DlFHSpNnkPqf0/bfJHghH8J8FRPAFpM2GbpGwBHAAAAABJRU5ErkJggg==",
+              "WhenOpened": "2025-09-02T11:21:18.723Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
