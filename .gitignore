@@ -24,3 +24,7 @@ __pycache__/
 .venv/
 venv/
 .ipynb_checkpoints/
+
+# Local Claude Code / MCP configuration
+/.claude/
+.mcp.json
