@@ -2,25 +2,25 @@
 
 **Embedding neural networks into dynamic power system simulators**
 
-RamsesNN integrates Physics-Informed Neural Networks (PINNs) into the RAMSES time-domain simulator, part of the [STEPSS](https://stepss.sps-lab.org/) power system simulation platform. Neural networks trained in PyTorch are exported to ONNX, converted to native Fortran with the [roseNNa](https://github.com/comp-physics/roseNNa) inference library, and embedded in RAMSES as custom injector models — replacing or augmenting traditional power system component models.
+RamsesNN integrates Physics-Informed Neural Networks (PINNs) into the RAMSES time-domain simulator, part of the [STEPSS](https://stepss.sps-lab.org/) power system simulation platform. Neural networks trained in PyTorch are exported to ONNX, converted to native Fortran with the [roseNNa](https://github.com/comp-physics/roseNNa) inference library, and embedded in RAMSES as custom injector models, replacing or augmenting traditional power system component models.
 
 ---
 
 ## Features
 
-- **PyTorch-to-Fortran pipeline** — train in PyTorch, export to ONNX, run natively inside the Fortran simulator via roseNNa
-- **Fast inference** — roseNNa's optimized Fortran implementation is 2–5x faster than PyTorch for the small networks typical of physics applications
-- **Minimal intrusion** — the network plugs into RAMSES as a standard user injector model (Norton equivalent), with no changes to the simulator core
-- **Full and reduced-order models** — example synchronous machine PINNs with 10-input/9-output (full) and 8-input/7-output (reduced) variants
-- **Multiple named models** — the roseNNa reader shipped here is modified so `initialize_nnx(model_name)` loads `onnxModel_<name>.txt` / `onnxWeights_<name>.txt`, allowing several networks side by side
-- **Standalone test harness** — `Evaluate_PINN/` evaluates the PINN + roseNNa inference outside the simulator
-- **ONNX standard** — universal format compatible with PyTorch, TensorFlow, and Keras
+- **PyTorch-to-Fortran pipeline**: train in PyTorch, export to ONNX, run natively inside the Fortran simulator via roseNNa
+- **Fast inference**: roseNNa's optimized Fortran implementation is 2–5x faster than PyTorch for the small networks typical of physics applications
+- **Minimal intrusion**: the network plugs into RAMSES as a standard user injector model (Norton equivalent), with no changes to the simulator core
+- **Full and reduced-order models**: example synchronous machine PINNs with 10-input/9-output (full) and 8-input/7-output (reduced) variants
+- **Multiple named models**: the roseNNa reader shipped here is modified so `initialize_nnx(model_name)` loads `onnxModel_<name>.txt` / `onnxWeights_<name>.txt`, allowing several networks side by side
+- **Standalone test harness**: `Evaluate_PINN/` evaluates the PINN + roseNNa inference outside the simulator
+- **ONNX standard**: universal format compatible with PyTorch, TensorFlow, and Keras
 
 ---
 
 ## Installation
 
-**Requirements:** Python 3.10 with `numpy<2`, `onnx`, `onnxruntime`, CPU `torch`, and `fypp` (for ONNX-to-Fortran conversion); Visual Studio with Intel Fortran (oneAPI) to build the included `URAMSES` and `Evaluate_PINN` solutions on Windows; the RAMSES library and module files from [stepss-uramses](https://github.com/SPS-L/stepss-uramses) (proprietary, not included — see [License](#license)).
+**Requirements:** Python 3.10 with `numpy<2`, `onnx`, `onnxruntime`, CPU `torch`, and `fypp` (for ONNX-to-Fortran conversion); Visual Studio with Intel Fortran (oneAPI) to build the included `URAMSES` and `Evaluate_PINN` solutions on Windows; the RAMSES library and module files from [stepss-uramses](https://github.com/SPS-L/stepss-uramses) (proprietary, not included; see [License](#license)).
 
 ```bash
 git clone https://github.com/SPS-L/stepss-RamsesNN.git
@@ -44,7 +44,7 @@ A full copy of roseNNa is vendored at `Evaluate_PINN/roseNNa-master/`; you can u
 ## Quick Start
 
 1. **Train and export** your network in PyTorch to ONNX (`torch.onnx.export`)
-2. **Convert** the ONNX model to Fortran with roseNNa (`modelParserONNX.py` + `fypp`) — see the [workflow](#complete-workflow) below
+2. **Convert** the ONNX model to Fortran with roseNNa (`modelParserONNX.py` + `fypp`). See the [workflow](#complete-workflow) below
 3. **Drop the generated files** into the RAMSES project: `modelCreator.f90` alongside the roseNNa sources in `URAMSES/rosenna/`, and `onnxModel_<name>.txt` / `onnxWeights_<name>.txt` next to the RAMSES executable
 4. **Build** the `URAMSES` solution and run the simulation; the `inj_norton` injector model performs the neural network forward pass at every step
 
@@ -152,8 +152,8 @@ These roseNNa source files must be part of the RAMSES user-model project. They a
 
 Place the generated model files in the RAMSES executable directory:
 
-- `onnxModel_<name>.txt` — model structure
-- `onnxWeights_<name>.txt` — model weights
+- `onnxModel_<name>.txt`: model structure
+- `onnxWeights_<name>.txt`: model weights
 
 **Note**: The `reader.f90` in this repository is modified relative to upstream roseNNa: `initialize_nnx(model_name)` takes a model name and loads the matching `onnxModel_<name>.txt` / `onnxWeights_<name>.txt` pair, so multiple networks can coexist.
 
@@ -336,13 +336,13 @@ torch.onnx.export(model, (inp, hidden),
 
 ## License
 
-RamsesNN is distributed under the **MIT License** — see [LICENSE](LICENSE). Copyright (c) 2025 Bruno Gelfort.
+RamsesNN is distributed under the **MIT License**. See [LICENSE](LICENSE). Copyright (c) 2025 Bruno Gelfort.
 
 The MIT grant covers **only** the code in this repository. It does not extend to
 its dependencies, which carry their own terms:
 
-- **roseNNa** — MIT License
-- **RAMSES / URAMSES** — Academic Public License (non-commercial). RAMSES is the
+- **roseNNa**: MIT License
+- **RAMSES / URAMSES**: Academic Public License (non-commercial). RAMSES is the
   property of the University of Liège.
 
 ### Obtaining RAMSES
@@ -359,4 +359,4 @@ not redistributable under MIT. To build the URAMSES models here, get them from
 
 RamsesNN was originally developed by **Bruno Gelfort** (MSc thesis, ETH Zurich, 2025). It is maintained by the [Sustainable Power Systems Laboratory (SPS-L)](https://sps-lab.org/) at the Cyprus University of Technology, under the direction of Dr. Petros Aristidou.
 
-**Contact:** info@sps-lab.org — [https://sps-lab.org](https://sps-lab.org)
+**Contact:** info@sps-lab.org, [https://sps-lab.org](https://sps-lab.org)
