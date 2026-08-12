@@ -328,7 +328,7 @@ torch.onnx.export(model, (inp, hidden),
 | Document | Description |
 |----------|-------------|
 | [STEPSS platform](https://stepss.sps-lab.org/) | Documentation site for the STEPSS simulation platform |
-| [PyRAMSES](https://stepss.sps-lab.org/pyramses/) | Using the compiled RAMSES library from Python |
+| [stepss](https://stepss.sps-lab.org/pyramses/) | Using the compiled RAMSES library from Python |
 | [URAMSES/README.rst](URAMSES/README.rst) | Building user models with Visual Studio and Intel Fortran |
 | [roseNNa](https://github.com/comp-physics/roseNNa) | Upstream neural network inference library for Fortran/C |
 

@@ -1,7 +1,7 @@
 About
 -----
 
-This project is used to include user models in PyRAMSES. It requires the use of Visual Studio and Intel Fortran Compiler. You can find details how to install them in the file `Installing the Intel oneAPI Fortran compiler.pdf <https://github.com/SPS-L/stepss-uramses/blob/master/Installing%20the%20Intel%20oneAPI%20Fortran%20compiler.pdf>`_.
+This project is used to include user models in stepss. It requires the use of Visual Studio and Intel Fortran Compiler. You can find details how to install them in the file `Installing the Intel oneAPI Fortran compiler.pdf <https://github.com/SPS-L/stepss-uramses/blob/master/Installing%20the%20Intel%20oneAPI%20Fortran%20compiler.pdf>`_.
 
 Summarizing the methodology:
 
@@ -11,6 +11,6 @@ Summarizing the methodology:
 4. Open the URAMSES.sln with MS Visual Studio
 5. Add the new files from the my_models folder to the dllramses project in MS Studio (right-click on the project --> add existing files)
 6. Compile the dllramses project (right-click --> compile)
-7. Use the following command in pyramses to indicate the location of the newly generated dll file: ram = pyramses.sim(r'C:\....')  where inside the quotes you put the directory where your ramses.dll file is located
+7. Use the following command in stepss to indicate the location of the newly generated dll file: ram = stepss.sim(r'C:\....')  where inside the quotes you put the directory where your ramses.dll file is located
 
 Please check the documentation under `https://stepss.sps-lab.org/pyramses/ <https://stepss.sps-lab.org/pyramses/>`_.
