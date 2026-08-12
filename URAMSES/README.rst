@@ -13,4 +13,4 @@ Summarizing the methodology:
 6. Compile the dllramses project (right-click --> compile)
 7. Use the following command in stepss to indicate the location of the newly generated dll file: ram = stepss.sim(r'C:\....')  where inside the quotes you put the directory where your ramses.dll file is located
 
-Please check the documentation under `https://stepss.sps-lab.org/pyramses/ <https://stepss.sps-lab.org/pyramses/>`_.
+Please check the documentation under `https://stepss.sps-lab.org/python/ <https://stepss.sps-lab.org/python/>`_.
